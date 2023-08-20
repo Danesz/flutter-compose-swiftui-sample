@@ -1,3 +1,4 @@
+import 'package:compose_and_swiftui_sample/nativeview.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -57,6 +58,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  //if we need to identify the native view
+  //UniqueKey uniqueViewKey = UniqueKey();
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -105,6 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+             const Center(
+              child:
+                SizedBox(height: 100, child: NativeView(/*key: uniqueViewKey*/))
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
