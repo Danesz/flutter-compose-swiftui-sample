@@ -43,6 +43,7 @@ class NativeView extends StatelessWidget {
               ..create();
           },
         );
+      case TargetPlatform.macOS:
       case TargetPlatform.iOS:
         return UiKitView(
             viewType: viewType,
